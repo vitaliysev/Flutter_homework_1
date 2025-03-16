@@ -1,0 +1,33 @@
+name: kototinder
+description: A simple Tinder-like app for cats.
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.3
+  cached_network_image: ^3.2.0
+  flutter_lints: ^2.0.0
+  flutter_card_swiper: ^1.0.0
+  lottie: ^2.5.0
+  flutter_launcher_icons: ^0.13.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icons/icon.png
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/icon.png"
