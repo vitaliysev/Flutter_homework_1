@@ -10,12 +10,20 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.13.3
+  http: ^0.13.5
   cached_network_image: ^3.2.0
   flutter_lints: ^2.0.0
   flutter_card_swiper: ^1.0.0
   lottie: ^2.5.0
   flutter_launcher_icons: ^0.13.1
+  shared_preferences: ^2.2.3
+  intl: ^0.17.0
+  flutter_bloc: ^8.1.1
+  get_it: ^7.2.0
+  dio: ^5.4.0
+  equatable: ^2.0.5
+  connectivity_plus: ^6.0.5
+  bloc: ^8.1.4
 
 dev_dependencies:
   flutter_test:

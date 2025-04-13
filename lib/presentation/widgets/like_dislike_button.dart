@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 class LikeDislikeButton extends StatelessWidget {
   final VoidCallback onLike;
   final VoidCallback onDislike;
+  final bool isEnabled; // Добавляем параметр
 
   const LikeDislikeButton({
     super.key,
     required this.onLike,
     required this.onDislike,
+    this.isEnabled = true, // По умолчанию кнопки активны
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        vertical: 20.0,
-      ),
+      padding: const EdgeInsets.symmetric(vertical: 20.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -33,9 +33,16 @@ class LikeDislikeButton extends StatelessWidget {
               ],
             ),
             child: IconButton(
-              onPressed: onDislike,
+              onPressed: isEnabled
+                  ? onDislike
+                  : null, // Отключаем, если isEnabled == false
               iconSize: 70,
-              icon: const Icon(Icons.thumb_down, color: Colors.red),
+              icon: Icon(
+                Icons.thumb_down,
+                color: isEnabled
+                    ? Colors.red
+                    : Colors.grey, // Серый цвет для неактивной кнопки
+              ),
               padding: const EdgeInsets.all(16),
             ),
           ),
@@ -53,9 +60,16 @@ class LikeDislikeButton extends StatelessWidget {
               ],
             ),
             child: IconButton(
-              onPressed: onLike,
+              onPressed: isEnabled
+                  ? onLike
+                  : null, // Отключаем, если isEnabled == false
               iconSize: 70,
-              icon: const Icon(Icons.thumb_up, color: Colors.green),
+              icon: Icon(
+                Icons.thumb_up,
+                color: isEnabled
+                    ? Colors.green
+                    : Colors.grey, // Серый цвет для неактивной кнопки
+              ),
               padding: const EdgeInsets.all(16),
             ),
           ),

@@ -8,13 +8,11 @@ class DetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-    const purpleColor = Color(0xFF8E24AA); 
+    const purpleColor = Color(0xFF8E24AA);
 
     return Scaffold(
       body: CustomScrollView(
         slivers: [
-          
           SliverAppBar(
             expandedHeight: 300.0,
             pinned: true,
@@ -60,7 +58,7 @@ class DetailScreen extends StatelessWidget {
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: [
-                          Color(0x4D000000), 
+                          Color(0x4D000000),
                           Color(0xB3000000),
                         ],
                       ),
@@ -70,7 +68,6 @@ class DetailScreen extends StatelessWidget {
               ),
             ),
           ),
-          
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
