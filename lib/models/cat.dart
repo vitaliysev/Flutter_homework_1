@@ -1,4 +1,3 @@
-// cat.dart
 class Cat {
   final String id;
   final String imageUrl;
