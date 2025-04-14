@@ -8,8 +8,6 @@ class Cat {
   final String origin;
   final String lifeSpan;
 
-  /// Дата, когда пользователь лайкнул этого кота.
-  /// В вашем случае хранится только в рантайме.
   final DateTime? likedAt;
 
   Cat({
@@ -35,7 +33,6 @@ class Cat {
     );
   }
 
-  /// Метод, чтобы удобно копировать котика, добавляя/меняя likedAt.
   Cat copyWith({DateTime? likedAt}) {
     return Cat(
       id: id,

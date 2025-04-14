@@ -28,23 +28,19 @@ class CatService {
 
   Future<void> saveState(List<Cat> likedCats, int likeCount) async {
     final prefs = await SharedPreferences.getInstance();
-    // Сохраняем likedCats
     final likedCatsJson = jsonEncode(likedCats.map(_catToJson).toList());
     await prefs.setString(likedCatsKey, likedCatsJson);
-    // Сохраняем likeCount
     await prefs.setInt(likeCountKey, likeCount);
   }
 
   Future<Map<String, dynamic>> loadState() async {
     final prefs = await SharedPreferences.getInstance();
-    // Загружаем likedCats
     final likedCatsJson = prefs.getString(likedCatsKey);
     List<Cat> likedCats = [];
     if (likedCatsJson != null) {
       final List<dynamic> likedCatsList = jsonDecode(likedCatsJson);
       likedCats = likedCatsList.map((json) => Cat.fromJson(json)).toList();
     }
-    // Загружаем likeCount
     final likeCount = prefs.getInt(likeCountKey) ?? 0;
     return {
       'likedCats': likedCats,

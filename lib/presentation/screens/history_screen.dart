@@ -32,7 +32,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
             canPop: false,
             onPopInvokedWithResult: (didPop, result) {
               if (didPop) {
-                return; // Если навигация уже выполнена, ничего не делаем
+                return;
               }
               final updatedLikedCats =
                   providerContext.read<HistoryCubit>().state.likedCats;
@@ -40,9 +40,8 @@ class _HistoryScreenState extends State<HistoryScreen> {
               widget.onLikedCatsChanged();
             },
             child: GestureDetector(
-              // Перехватываем нажатия вне фокуса
               onTap: () {
-                FocusScope.of(context).unfocus(); // Снимаем фокус с TextField
+                FocusScope.of(context).unfocus();
               },
               child: Scaffold(
                 body: CustomScrollView(

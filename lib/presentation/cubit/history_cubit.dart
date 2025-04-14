@@ -38,7 +38,7 @@ class HistoryState extends Equatable {
   factory HistoryState.initial() => const HistoryState(
         likedCats: [],
         filteredCats: [],
-        searchQuery: '', // Изначально запрос пустой
+        searchQuery: '',
       );
 
   HistoryState copyWith({

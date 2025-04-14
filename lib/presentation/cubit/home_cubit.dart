@@ -7,7 +7,7 @@ import 'package:kototinder/models/cat.dart';
 class HomeCubit extends Cubit<HomeState> {
   final CatRepository catRepository;
   final CatService catService;
-  bool isFetching = false; // Флаг для отслеживания состояния запроса
+  bool isFetching = false;
 
   HomeCubit(this.catRepository, this.catService) : super(HomeState.initial()) {
     _loadState();
@@ -29,7 +29,7 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   Future<void> fetchCat() async {
-    if (isFetching) return; // Не выполняем новый запрос, если уже есть активный
+    if (isFetching) return;
     isFetching = true;
     emit(state.copyWith(isLoading: true));
     try {

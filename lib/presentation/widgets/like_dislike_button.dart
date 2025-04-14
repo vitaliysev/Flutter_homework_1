@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 class LikeDislikeButton extends StatelessWidget {
   final VoidCallback onLike;
   final VoidCallback onDislike;
-  final bool isEnabled; // Добавляем параметр
+  final bool isEnabled;
 
   const LikeDislikeButton({
     super.key,
     required this.onLike,
     required this.onDislike,
-    this.isEnabled = true, // По умолчанию кнопки активны
+    this.isEnabled = true,
   });
 
   @override
@@ -35,13 +35,13 @@ class LikeDislikeButton extends StatelessWidget {
             child: IconButton(
               onPressed: isEnabled
                   ? onDislike
-                  : null, // Отключаем, если isEnabled == false
+                  : null,
               iconSize: 70,
               icon: Icon(
                 Icons.thumb_down,
                 color: isEnabled
                     ? Colors.red
-                    : Colors.grey, // Серый цвет для неактивной кнопки
+                    : Colors.grey,
               ),
               padding: const EdgeInsets.all(16),
             ),
@@ -62,13 +62,13 @@ class LikeDislikeButton extends StatelessWidget {
             child: IconButton(
               onPressed: isEnabled
                   ? onLike
-                  : null, // Отключаем, если isEnabled == false
+                  : null,
               iconSize: 70,
               icon: Icon(
                 Icons.thumb_up,
                 color: isEnabled
                     ? Colors.green
-                    : Colors.grey, // Серый цвет для неактивной кнопки
+                    : Colors.grey,
               ),
               padding: const EdgeInsets.all(16),
             ),
