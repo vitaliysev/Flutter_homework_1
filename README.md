@@ -40,7 +40,7 @@
 
 ## Ссылка на скачивание APK
 
-Вы можете скачать последнюю версию приложения по [этой ссылке](https://github.com/vitaliysev/Flutter_homework_1/releases/tag/Latest).
+Вы можете скачать последнюю версию приложения по [этой ссылке](https://github.com/vitaliysev/Flutter_homework_1/releases/tag/v1.0.0).
 
 ## Установка и запуск
 
