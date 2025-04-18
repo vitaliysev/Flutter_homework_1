@@ -33,15 +33,11 @@ class LikeDislikeButton extends StatelessWidget {
               ],
             ),
             child: IconButton(
-              onPressed: isEnabled
-                  ? onDislike
-                  : null,
+              onPressed: isEnabled ? onDislike : null,
               iconSize: 70,
               icon: Icon(
                 Icons.thumb_down,
-                color: isEnabled
-                    ? Colors.red
-                    : Colors.grey,
+                color: isEnabled ? Colors.red : Colors.grey,
               ),
               padding: const EdgeInsets.all(16),
             ),
@@ -60,15 +56,11 @@ class LikeDislikeButton extends StatelessWidget {
               ],
             ),
             child: IconButton(
-              onPressed: isEnabled
-                  ? onLike
-                  : null,
+              onPressed: isEnabled ? onLike : null,
               iconSize: 70,
               icon: Icon(
                 Icons.thumb_up,
-                color: isEnabled
-                    ? Colors.green
-                    : Colors.grey,
+                color: isEnabled ? Colors.green : Colors.grey,
               ),
               padding: const EdgeInsets.all(16),
             ),
